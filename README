@@ -1,0 +1,14 @@
+GDT 2017 
+Game Dev Tool README
+
+Program Structure:
+
+GDT is founded on a set of UI/OS functions that have been labeled Backbone. Since the Arduino doesn't have an OS or built in graphical capabilities, we had to create our own functions for drawing to the screen, as well as handling context switching when the program needs to go to a different window.
+
+GDT.ino represents the core of the project. All OS/UI Functions and variables reside there. Shared memory must reside there since the linking order of an Arduino project is not defined well.
+
+BaseEngine.ino represents an example use of the graphical functionality. Can be extended later for GDT.
+
+SpriteMaker.ino is the paint program that allows a user to draw sprites to use in other parts of the program.
+
+SpriteManager.ino is the program that serves as a basic file structure for selecting sprites.
